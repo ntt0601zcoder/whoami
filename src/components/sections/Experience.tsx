@@ -4,6 +4,7 @@ import { experience, ui } from '@/i18n/content'
 import { fadeUp, VIEWPORT } from '@/lib/motion'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { RichText } from '@/components/ui/RichText'
+import { expId } from '@/lib/sections'
 
 export function Experience() {
   const { t } = useLang()
@@ -28,7 +29,7 @@ export function Experience() {
               viewport={VIEWPORT}
             >
               <span className="timeline__marker" aria-hidden="true" />
-              <div className="timeline__card card">
+              <div className="timeline__card card" id={expId(job.company)}>
                 <div className="timeline__head">
                   <div className="timeline__id">
                     <h3 className="timeline__company">

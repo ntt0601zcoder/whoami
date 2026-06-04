@@ -11,6 +11,7 @@ import {
   MapPin,
   Sparkle,
 } from '@/components/ui/Icons'
+import { Terminal } from '@/components/ui/Terminal'
 
 const container = {
   hidden: {},
@@ -21,9 +22,6 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
 }
 
-const focusValue = 'devops · platform · backend'
-const statusValue = 'available'
-
 const scrollTo = (id: string) => (e: MouseEvent) => {
   e.preventDefault()
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -31,13 +29,6 @@ const scrollTo = (id: string) => (e: MouseEvent) => {
 
 export function Hero() {
   const { t } = useLang()
-
-  const card: { label: string; value: string; status?: boolean }[] = [
-    { label: 'role', value: t(ui.hero.role) },
-    { label: 'focus', value: t(focusValue) },
-    { label: 'based', value: t(profile.location) },
-    { label: 'status', value: t(statusValue), status: true },
-  ]
 
   return (
     <section className="hero" id="top">
@@ -128,37 +119,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, ease: EASE, delay: 0.3 }}
         >
-          <div className="termcard" aria-hidden="true">
-            <div className="termcard__bar">
-              <span className="termcard__dot" />
-              <span className="termcard__dot" />
-              <span className="termcard__dot" />
-              <span className="termcard__title mono">whoami</span>
-            </div>
-            <div className="termcard__body mono">
-              <div className="termcard__line">
-                <span className="termcard__prompt">$</span>
-                <span>whoami</span>
-              </div>
-              <div className="termcard__line termcard__out">
-                nguyen_trong_thuan
-              </div>
-              <div className="termcard__sep" />
-              {card.map((row) => (
-                <div className="termcard__kv" key={row.label}>
-                  <span className="termcard__key">{row.label}</span>
-                  <span className="termcard__val">
-                    {row.status && <span className="termcard__pulse" />}
-                    {row.value}
-                  </span>
-                </div>
-              ))}
-              <div className="termcard__line termcard__cursor">
-                <span className="termcard__prompt">$</span>
-                <span className="termcard__caret" />
-              </div>
-            </div>
-          </div>
+          <Terminal />
         </motion.aside>
       </div>
 

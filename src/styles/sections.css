@@ -437,6 +437,200 @@
   }
 }
 
+/* ---- interactive terminal: clickable collapsed card ---- */
+.termcard--btn {
+  display: block;
+  width: 100%;
+  max-width: 410px;
+  padding: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: transform var(--dur) var(--ease),
+    border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.termcard--btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 44px -24px var(--accent);
+}
+.termcard--btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+.termcard__hintline {
+  margin-top: 0.55rem;
+  align-items: center;
+}
+.termcard__hint {
+  color: var(--text-faint);
+}
+.termcard__cta {
+  display: block;
+  padding: 0.6rem 1.15rem;
+  border-top: 1px dashed var(--border);
+  background: var(--bg-subtle);
+  font-size: 0.72rem;
+  color: var(--accent);
+}
+.termcard--btn:hover .termcard__cta {
+  background: var(--accent-soft);
+}
+.termcard__cta b {
+  font-weight: 600;
+}
+
+/* ---- interactive terminal: expanded overlay ---- */
+.term-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.term-modal {
+  display: flex;
+  flex-direction: column;
+  width: min(660px, 100%);
+  max-height: min(70vh, 580px);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+.term-modal__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 0.95rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+.term-modal__close {
+  margin-left: auto;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.term-modal__close:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.term-modal__hist {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+  padding: 1.1rem 1.15rem;
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+.term-line {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--text-muted);
+}
+.term-line b {
+  color: var(--text);
+  font-weight: 600;
+}
+.term-line--muted {
+  color: var(--text-faint);
+}
+.term-line--cmd {
+  margin-top: 0.5rem;
+  color: var(--accent);
+}
+.term-line--err {
+  color: #e0686a;
+}
+.term-open {
+  align-self: flex-start;
+  margin: 0.3rem 0 0.45rem;
+  padding: 0.1rem 0;
+  font: inherit;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease);
+}
+.term-open:hover {
+  border-bottom-color: var(--accent);
+}
+.term-suggest {
+  list-style: none;
+  max-height: 170px;
+  overflow-y: auto;
+  border-top: 1px solid var(--border);
+  background: var(--bg-subtle);
+}
+.term-suggest__item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 0.4rem 1.15rem;
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.term-suggest__item.is-sel {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+.term-suggest__token {
+  flex: none;
+  min-width: 6.5rem;
+  color: var(--accent);
+}
+.term-suggest__hint {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text-faint);
+}
+.term-modal__inputline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.15rem;
+  border-top: 1px solid var(--border);
+}
+.term-input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: none;
+  border: none;
+  outline: none;
+  caret-color: var(--accent);
+}
+.term-input::placeholder {
+  color: var(--text-faint);
+}
+
 .hero__scroll {
   position: absolute;
   left: 50%;

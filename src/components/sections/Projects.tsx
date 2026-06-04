@@ -3,6 +3,7 @@ import { projects, ui } from '@/i18n/content'
 import { SectionHeader } from '@/components/ui/SectionHeader'
 import { Stagger, StaggerItem } from '@/components/ui/Animate'
 import { ArrowUpRight } from '@/components/ui/Icons'
+import { projId } from '@/lib/sections'
 
 export function Projects() {
   const { t } = useLang()
@@ -25,7 +26,7 @@ export function Projects() {
               }`}
             >
               <a
-                id={p.id}
+                id={projId(p)}
                 className="project card"
                 href={p.repo}
                 target="_blank"
