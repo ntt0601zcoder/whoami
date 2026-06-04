@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-palette="terminal" data-mode="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#0a0e0d" />
+
+    <title>Nguyen Trong Thuan — Senior Platform Engineer</title>
+    <meta
+      name="description"
+      content="Nguyen Trong Thuan — Senior Platform Engineer. I build the infrastructure behind live video and large-scale backend systems: live streaming to 700K+ concurrent viewers, observability at 10B+ records/day, and cloud-native services."
+    />
+    <meta name="author" content="Nguyen Trong Thuan" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nguyen Trong Thuan" />
+    <meta property="og:title" content="Nguyen Trong Thuan — Senior Platform Engineer" />
+    <meta
+      property="og:description"
+      content="I build the infrastructure behind live video and large-scale backend systems."
+    />
+    <!-- TODO after deploy: add og:url and og:image (1200x630) pointing at the custom domain. -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Nguyen Trong Thuan — Senior Platform Engineer" />
+    <meta
+      name="twitter:description"
+      content="I build the infrastructure behind live video and large-scale backend systems."
+    />
+
+    <!-- Prevent theme flash: apply saved mode/palette before paint -->
+    <script>
+      (function () {
+        try {
+          var mode = localStorage.getItem('whoami:mode');
+          if (!mode) {
+            mode = window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+          }
+          document.documentElement.setAttribute('data-mode', mode);
+
+          // Both modes ship the terminal (green) palette.
+          document.documentElement.setAttribute('data-palette', 'terminal');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
