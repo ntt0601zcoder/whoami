@@ -74,7 +74,7 @@ export function Hero() {
             <a
               className="btn btn--primary"
               href={profile.resumePath}
-              download="Nguyen-Trong-Thuan-Resume.pdf"
+              download="Resume - Nguyen Trong Thuan - Software Engineer.pdf"
             >
               <Download />
               {t(ui.actions.downloadCv)}
