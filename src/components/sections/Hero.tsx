@@ -4,7 +4,7 @@ import { useLang } from '@/i18n/LanguageContext'
 import { profile, social, ui } from '@/i18n/content'
 import { EASE } from '@/lib/motion'
 import {
-  Download,
+  ArrowUpRight,
   Github,
   LinkedIn,
   Mail,
@@ -65,10 +65,11 @@ export function Hero() {
             <a
               className="btn btn--primary"
               href={profile.resumePath}
-              download="Resume - Nguyen Trong Thuan - Software Engineer.pdf"
+              target="_blank"
+              rel="noreferrer"
             >
-              <Download />
-              {t(ui.actions.downloadCv)}
+              {t(ui.actions.viewCv)}
+              <ArrowUpRight />
             </a>
             <a
               className="btn btn--ghost"

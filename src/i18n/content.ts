@@ -19,7 +19,7 @@ export const ui = {
     contact: 'Contact',
   },
   actions: {
-    downloadCv: 'Download CV',
+    viewCv: 'View CV',
     getInTouch: 'Get in touch',
     backToTop: 'Back to top',
     toggleTheme: 'Toggle light / dark',
@@ -353,9 +353,19 @@ export const projects: Project[] = [
     tagline: 'Prometheus exporter for Flussonic',
     description:
       'A lightweight Prometheus exporter for Flussonic Media Server, surfacing real-time stream and server metrics for monitoring.',
-    tags: ['Go', 'Prometheus', 'Observability'],
+    tags: ['Python', 'Prometheus', 'Observability'],
     repo: 'https://github.com/ntt0601zcoder/flussonic-exporter',
-    language: 'Go',
+    language: 'Python',
+    featured: true,
+  },
+  {
+    name: 'Music Converter',
+    tagline: 'Audio & video → sheet music',
+    description:
+      'Turns audio or video into sheet music in the browser — AI note detection with MIDI / MusicXML / PDF export, piano playback, and a falling-notes view.',
+    tags: ['TypeScript', 'AI', 'Web Audio', 'MIDI'],
+    repo: 'https://github.com/ntt0601zcoder/music-converter',
+    language: 'TypeScript',
     featured: true,
   },
   {
