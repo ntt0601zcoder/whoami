@@ -200,7 +200,7 @@ export const experience: Experience[] = [
   {
     company: 'VieON',
     org: 'DatVietVAC',
-    role: 'Senior Platform Engineer',
+    role: 'Senior Backend Engineer',
     period: 'Nov 2025 — Present',
     current: true,
     summary:
@@ -247,7 +247,7 @@ export const experience: Experience[] = [
   },
   {
     company: 'VNPAY',
-    role: 'Backend Engineer',
+    role: 'Senior Backend Engineer',
     period: 'May 2024 — Sep 2025',
     summary:
       'Built cloud-native platform services: observability, private networking, and managed databases for VNPAY Cloud.',
@@ -287,7 +287,7 @@ export const experience: Experience[] = [
   },
   {
     company: 'FPT Telecom',
-    role: 'Backend Developer',
+    role: 'Senior Backend Engineer',
     period: 'Jun 2022 — May 2024',
     summary:
       'Built backend services and data pipelines: microservices, notifications, ETL, and database security.',
