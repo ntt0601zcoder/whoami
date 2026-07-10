@@ -247,7 +247,7 @@ export const experience: Experience[] = [
   },
   {
     company: 'VNPAY',
-    role: 'Senior Backend Engineer',
+    role: 'Backend Engineer',
     period: 'May 2024 — Sep 2025',
     summary:
       'Built cloud-native platform services: observability, private networking, and managed databases for VNPAY Cloud.',
@@ -287,7 +287,7 @@ export const experience: Experience[] = [
   },
   {
     company: 'FPT Telecom',
-    role: 'Senior Backend Engineer',
+    role: 'Backend Engineer',
     period: 'Jun 2022 — May 2024',
     summary:
       'Built backend services and data pipelines: microservices, notifications, ETL, and database security.',
